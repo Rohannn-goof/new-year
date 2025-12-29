@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>March</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Caveat:wght@500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<audio id="bgMusic" loop>
+  <source src="music/wanna be yours.mp3" type="audio/mpeg">
+</audio>
+
+<!-- floating shapes -->
+<div class="shape s1"></div>
+<div class="shape s2"></div>
+<div class="shape s3"></div>
+<div class="shape s4"></div>
+
+<main class="page">
+
+  <header>
+    <h1>March</h1>
+    <p>the month things quietly shifted</p>
+  </header>
+
+  <section class="cards">
+
+    <div class="memory tilt-l">
+      <img src="images/img1.jpg">
+      <input placeholder="Demn...shawty with those causal looks...I.m flustered" />
+    </div>
+
+    <div class="memory tilt-r">
+      <img src="images/img2.jpg">
+      <input placeholder="Elegantly Beautiful..." />
+    </div>
+
+    <div class="memory tilt-s">
+      <img src="images/img3.jpg">
+      <input placeholder="Yooo....Wannabe my Girlfriend?" />
+    </div>
+
+  </section>
+
+  <section class="notes">
+    <textarea placeholder="March felt like growth, even if I didn’t notice it then…"></textarea>
+  </section>
+
+  <nav>
+    <button onclick="history.back()">← Back</button>
+    <button id="next">Next →</button>
+  </nav>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

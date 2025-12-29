@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>January</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<audio id="bgMusic" loop>
+  <source src="music/bg.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Corner glows -->
+<div class="corner top-left"></div>
+<div class="corner top-right"></div>
+<div class="corner bottom-left"></div>
+<div class="corner bottom-right"></div>
+
+<!-- Floating shapes -->
+<div class="shapes">
+  <div class="shape large pink" style="left:5%; animation-duration:70s;"></div>
+  <div class="shape medium peach" style="left:25%; animation-duration:55s;"></div>
+  <div class="shape large lav" style="left:50%; animation-duration:80s;"></div>
+  <div class="shape medium pink" style="left:75%; animation-duration:60s;"></div>
+</div>
+
+<!-- Content -->
+<div class="container">
+  <h1>January</h1>
+  <span class="subtitle">where it all began</span>
+
+  <!-- Gallery -->
+  <div class="gallery">
+
+    <div class="polaroid tilt-left">
+      <img src="images/img1.jpg">
+      <input type="text" placeholder="Write a caption…">
+    </div>
+
+    <div class="polaroid tilt-right">
+      <img src="images/img2.jpg">
+      <input type="text" placeholder="Write a caption…">
+    </div>
+
+    <div class="polaroid tilt-soft">
+      <img src="images/img3.jpg">
+      <input type="text" placeholder="Write a caption…">
+    </div>
+
+  </div>
+
+  <!-- Text box -->
+  <textarea placeholder="Write everything January meant to you..."></textarea>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <button disabled>← Back</button>
+    <button id="nextBtn">Next →</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

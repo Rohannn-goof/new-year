@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>April</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Caveat:wght@500&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <audio id="bgMusic" loop>
+    <source src="music/winnerloseer.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="page">
+
+    <header>
+      <h1>April</h1>
+      <p>where everything felt softer</p>
+    </header>
+    <button id="revealTruth" class="other-side-btn">
+      The Other Side
+    </button>
+    <section id="otherSide" class="other-side hidden">
+      <h1>April</h1>
+      <p class="subtitle">The Month of Confession...</p>
+      <P class="truth">
+        April 7th.
+
+        That’s when I finally said what I had been holding in for a long time.
+        I spoke honestly, without expectations — just truth.
+
+        She didn’t feel the same.
+
+        It wasn’t cruel. It wasn’t loud.
+        But it was enough to change something inside me.
+
+        I stayed quiet after that.
+        Not because I was angry —
+        but because I was learning how to carry disappointment
+        without turning it into bitterness.
+      </P>
+      <textarea placeholder="Write the truth of this month here…"></textarea>
+
+      <button id="toMay" class="continue-btn">
+        Continue →
+      </button>
+    </section>
+
+    <section class="gallery">
+
+      <div class="polaroid tilt-left">
+        <img src="images/img1.jpg" alt="">
+        <input placeholder="Nah...I didnt take this..Im better than this T-T" />
+      </div>
+
+      <div class="polaroid tilt-right">
+        <img src="images/img2.jpg" alt="">
+        <input placeholder="Demn...I need a raise..alone with you feels peaceful and chaotic" />
+      </div>
+
+      <div class="polaroid tilt-soft">
+        <img src="images/img3.jpg" alt="">
+        <input placeholder="took this unexpectedly...Do you like it?" />
+      </div>
+
+    </section>
+
+    <section class="story">
+      <textarea
+        placeholder="April felt like slowing down. Like breathing again. Like moments that didn’t need words…"></textarea>
+    </section>
+
+    <nav>
+      <button onclick="history.back()">← Back</button>
+      <button id="next">Next →</button>
+    </nav>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.35)
+    ),
+    url("images/bg.jpg") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* SNOW */
+#snow {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+/* CONTENT */
+.page {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 120px 8%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 5.5rem;
+  margin-bottom: 30px;
+}
+
+.wish-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  max-width: 720px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+/* HER WISH */
+.her-wish {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.her-wish h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.her-wish textarea {
+  width: 100%;
+  min-height: 160px;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 1.05rem;
+  resize: none;
+}
+
+#savedText {
+  display: block;
+  margin-top: 12px;
+  opacity: 0;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+/* START OVER BUTTON */
+.restart-btn {
+  margin-top: 40px;
+  padding: 14px 42px;
+  border-radius: 40px;
+  border: none;
+  background: rgba(255,255,255,0.35);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.5);
+}

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BACKGROUND IMAGE (45% OVERLAY) ===== */
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #3a2a1f;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.45),
+      rgba(255,255,255,0.45)
+    ),
+    url("images/bg.jpg") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* ===== CONTENT ===== */
+.page {
+  position: relative;
+  z-index: 2;
+  padding: 95px 8%;
+  text-align: center;
+}
+
+/* HEADER */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8rem;
+  color: #8a4b1f;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1.15rem;
+  opacity: 0.65;
+}
+
+/* GALLERY */
+.gallery {
+  margin: 85px 0;
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
+/* MEMORY CARDS */
+.memory {
+  width: 250px;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(10px);
+  padding: 16px 16px 26px;
+  border-radius: 22px;
+  box-shadow: 0 28px 55px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+.memory img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CAPTIONS */
+.memory input {
+  margin-top: 14px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.15rem;
+  text-align: center;
+  color: #8a4b1f;
+}
+
+.memory input::placeholder {
+  color: #b07a55;
+}
+
+/* TILTS */
+.tilt-l { transform: rotate(-4deg); }
+.tilt-r { transform: rotate(4deg); }
+.tilt-s { transform: rotate(-2deg); }
+
+.memory:hover {
+  transform: rotate(0deg) scale(1.06);
+}
+
+/* STORY */
+.story textarea {
+  width: 100%;
+  max-width: 780px;
+  min-height: 190px;
+  padding: 30px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  font-size: 1.1rem;
+  resize: none;
+}
+
+/* NAV */
+nav {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav button {
+  padding: 18px 48px;
+  border-radius: 40px;
+  border: none;
+  background: #8a4b1f;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav button:hover {
+  background: #6f3a17;
+}

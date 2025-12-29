@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BACKGROUND IMAGE (35% OVERLAY) ===== */
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #1f2430;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.35),
+      rgba(255,255,255,0.35)
+    ),
+    url("images/bg.jpg") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* ===== CONTENT ===== */
+.page {
+  position: relative;
+  z-index: 2;
+  padding: 105px 8%;
+  text-align: center;
+}
+
+/* HEADER */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5.2rem;
+  color: #1e3557;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* GALLERY */
+.gallery {
+  margin: 90px 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* MEMORY CARDS */
+.memory {
+  width: 260px;
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(12px);
+  padding: 18px 18px 28px;
+  border-radius: 24px;
+  box-shadow: 0 35px 70px rgba(0,0,0,0.30);
+  transition: transform 0.45s ease;
+}
+
+.memory img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* CAPTIONS */
+.memory input {
+  margin-top: 16px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: 'Sacramento', cursive;
+  font-size: 1.35rem;
+  text-align: center;
+  color: #1e3557;
+}
+
+.memory input::placeholder {
+  color: #5a6f8f;
+}
+
+/* TILTS */
+.tilt-l { transform: rotate(-4deg); }
+.tilt-r { transform: rotate(5deg); }
+.tilt-s { transform: rotate(-2deg); }
+
+.memory:hover {
+  transform: rotate(0deg) scale(1.07);
+}
+
+/* STORY */
+.story textarea {
+  width: 100%;
+  max-width: 800px;
+  min-height: 210px;
+  padding: 34px;
+  border-radius: 34px;
+  border: none;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(16px);
+  font-size: 1.12rem;
+  resize: none;
+}
+
+/* NAV */
+nav {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav button {
+  padding: 18px 52px;
+  border-radius: 44px;
+  border: none;
+  background: #1e3557;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav button:hover {
+  background: #162943;
+}

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BACKGROUND IMAGE (30% OVERLAY → VERY VISIBLE) ===== */
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #2b2b2b;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.30),
+      rgba(255,255,255,0.30)
+    ),
+    url("images/bg.jpg") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* ===== CONTENT ===== */
+.page {
+  position: relative;
+  z-index: 2;
+  padding: 95px 8%;
+  text-align: center;
+}
+
+/* HEADER */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8rem;
+  color: #7a4a1f;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.65;
+}
+
+/* GALLERY */
+.gallery {
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
+/* MEMORY CARDS */
+.memory {
+  width: 250px;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(10px);
+  padding: 16px 16px 26px;
+  border-radius: 20px;
+  box-shadow: 0 30px 55px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+.memory img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CAPTIONS */
+.memory input {
+  margin-top: 14px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #5a3a1a;
+}
+
+.memory input::placeholder {
+  color: #8c6a4a;
+}
+
+/* TILTS */
+.tilt-l { transform: rotate(-4deg); }
+.tilt-r { transform: rotate(5deg); }
+.tilt-s { transform: rotate(-2deg); }
+
+.memory:hover {
+  transform: rotate(0deg) scale(1.06);
+}
+
+/* STORY */
+.story textarea {
+  width: 100%;
+  max-width: 740px;
+  min-height: 180px;
+  padding: 26px;
+  border-radius: 26px;
+  border: none;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  font-size: 1.08rem;
+  resize: none;
+}
+
+/* NAV */
+nav {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav button {
+  padding: 16px 44px;
+  border-radius: 34px;
+  border: none;
+  background: #d18b47;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav button:hover {
+  background: #b97534;
+}
